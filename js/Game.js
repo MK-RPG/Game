@@ -5,10 +5,16 @@ TopDownGame.Game = function(){};
 
 TopDownGame.Game.prototype = {
     create: function() {
-        this.map = this.game.add.tilemap('level1');
+        this.map = this.game.add.tilemap('map1');
 
         //the first parameter is the tileset name as specified in Tiled, the second is the key to the asset
-        this.map.addTilesetImage('base', 'gameTiles');
+        this.map.addTilesetImage('1', 'gameTiles1');
+        this.map.addTilesetImage('2', 'gameTiles2');
+        this.map.addTilesetImage('4', 'gameTiles3');
+        this.map.addTilesetImage('3', 'gameTiles4');
+        this.map.addTilesetImage('5', 'gameTiles5');
+
+
 
         //create layer
         this.backgroundlayer = this.map.createLayer('backgroundLayer');
