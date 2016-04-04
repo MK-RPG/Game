@@ -1,8 +1,9 @@
-var ProceduralGeneration = ProceduralGeneration || {};
+var TopDownGame = TopDownGame || {};
 
-var game = new Phaser.Game(600, 600, Phaser.CANVAS);
-game.state.add("BootState", new ProceduralGeneration.BootState());
-game.state.add("LoadingState", new ProceduralGeneration.LoadingState());
-game.state.add("DungeonState", new ProceduralGeneration.DungeonState());
-game.state.add("RoomState", new ProceduralGeneration.RoomState());
-game.state.start("DungeonState", true, false, 10);
+TopDownGame.game = new Phaser.Game(1280, 1280, Phaser.AUTO, '');
+
+TopDownGame.game.state.add('Boot', TopDownGame.Boot);
+TopDownGame.game.state.add('Preload', TopDownGame.Preload);
+TopDownGame.game.state.add('Game', TopDownGame.Game);
+
+TopDownGame.game.state.start('Boot');
