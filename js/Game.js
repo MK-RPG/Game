@@ -1,10 +1,13 @@
 var TopDownGame = TopDownGame || {};
 
 //title screen
-TopDownGame.Game = function(){};
+TopDownGame.Game = function(){
+	this.collectedCoins = 0;
+};
 
 TopDownGame.Game.prototype = {
   create: function() {
+	  
     this.map = this.game.add.tilemap('maze');
 
     //the first parameter is the tileset name as specified in Tiled, the second is the key to the asset
@@ -22,7 +25,7 @@ TopDownGame.Game.prototype = {
 
     //resizes the game world to match the layer dimensions
     
-
+    
     this.createItems();
     this.createDoors();    
 
@@ -44,6 +47,9 @@ TopDownGame.Game.prototype = {
     //move player with cursor keys
     this.cursors = this.game.input.keyboard.createCursorKeys();
 
+    this.text = this.game.add.text(20, 20, "Coins: ", { font: "50px Arial", fill: "#ff0044", align: "center" });
+	this.text.fixedToCamera = true;
+	
   },
   createItems: function() {
     //create items
@@ -88,11 +94,19 @@ TopDownGame.Game.prototype = {
       Object.keys(element.properties).forEach(function(key){
         sprite[key] = element.properties[key];
       });
+      
+      
   },
   update: function() {
+	 var _this=this;
+	 
     //collision
     this.game.physics.arcade.collide(this.player, this.blockedLayer);
-    this.game.physics.arcade.overlap(this.player, this.items, this.collect, null, this);
+    this.game.physics.arcade.overlap(this.player, this.items, function(player,collectable){
+    	_this.collectedCoins++;
+    	_this.text.text = 'Coins: ' + _this.collectedCoins;
+    	collectable.destroy();
+    });
     this.game.physics.arcade.overlap(this.player, this.doors, this.enterDoor, null, this);
 
     //player movement
@@ -102,23 +116,21 @@ TopDownGame.Game.prototype = {
 
 
     if(this.cursors.up.isDown) {
-    	this.player.body.velocity.y = -80;
+    	this.player.body.velocity.y = -140;
     }
     if(this.cursors.down.isDown) {
-    	this.player.body.velocity.y = 80;
+    	this.player.body.velocity.y = 140;
     }
     if(this.cursors.left.isDown) {
-    	this.player.body.velocity.x = -80;
+    	this.player.body.velocity.x = -140;
     }
     if(this.cursors.right.isDown) {
-    	this.player.body.velocity.x = 80;
+    	this.player.body.velocity.x = 140;
     }
   },
   collect: function(player, collectable) {
-    console.log('yummy!');
+    //console.log('yummy!');
 
-    //remove sprite
-    collectable.destroy();
   },
   enterDoor: function(player, door) {
     console.log('entering door that will take you to '+door.targetTilemap+' on x:'+door.targetX+' and y:'+door.targetY);

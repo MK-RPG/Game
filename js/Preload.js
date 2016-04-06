@@ -16,8 +16,10 @@ TopDownGame.Preload.prototype = {
     this.load.image('gameTiles', 'assets/images/tileset.png');
     this.load.image('greencup', 'assets/images/greencup.png');
     this.load.image('bluecup', 'assets/images/bluecup.png');
+    this.load.image('sword', 'assets/images/sword.png');
     this.load.image('player', 'assets/images/player.png');
     this.load.image('browndoor', 'assets/images/browndoor.png');
+    this.load.image('space', 'assets/images/space.png');
     
   },
   create: function() {
