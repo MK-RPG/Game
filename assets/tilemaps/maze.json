@@ -24,7 +24,7 @@
         }, 
         {
          "draworder":"topdown",
-         "height":40,
+         "height":0,
          "name":"objectsLayer",
          "objects":[
                 {
@@ -34,7 +34,7 @@
                  "name":"",
                  "properties":
                     {
-                     "sprite":"sword",
+                     "sprite":"greencup",
                      "type":"item"
                     },
                  "rotation":0,
@@ -51,7 +51,7 @@
                  "name":"",
                  "properties":
                     {
-                     "sprite":"sword",
+                     "sprite":"greencup",
                      "type":"item"
                     },
                  "rotation":0,
@@ -215,15 +215,66 @@
                  "width":54,
                  "x":586,
                  "y":506
+                }, 
+                {
+                 "gid":1772,
+                 "height":53,
+                 "id":12,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":239.5,
+                 "y":120.5
+                }, 
+                {
+                 "gid":1772,
+                 "height":53,
+                 "id":13,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":317.5,
+                 "y":431.5
+                }, 
+                {
+                 "gid":1772,
+                 "height":53,
+                 "id":14,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":869.5,
+                 "y":953.5
                 }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":40,
+         "width":0,
          "x":0,
          "y":0
         }],
- "nextobjectid":12,
+ "nextobjectid":15,
  "orientation":"orthogonal",
  "properties":
     {

@@ -23,8 +23,18 @@ TopDownGame.Preload.prototype = {
     this.load.spritesheet('player', 'assets/images/player.png', 32, 48);
     this.load.image('browndoor', 'assets/images/browndoor.png');
     this.load.image('watch', 'assets/images/watch.png');
+    this.load.image('treasure', 'assets/images/treasure.png');
     this.load.image('startScreen', 'assets/images/maze2.png');
+    this.load.image('winner', 'assets/images/win.png')
     this.load.image('gameOverScreen', 'assets/images/over.png');
+    
+    //sounds
+    this.load.audio('collect', 'assets/audio/coin.mp3');
+    this.load.audio('winner', 'assets/audio/win.wav');
+    this.load.audio('time', 'assets/audio/time.wav');
+    this.load.audio('village', 'assets/audio/village.wav');
+    this.load.audio('dungeonSound', 'assets/audio/dungeon.wav');
+    
   },
   create: function() {
     this.state.start('StartMenu');

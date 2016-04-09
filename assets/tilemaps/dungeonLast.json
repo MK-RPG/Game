@@ -142,8 +142,8 @@
                  "type":"",
                  "visible":true,
                  "width":57,
-                 "x":115.5,
-                 "y":1173.5
+                 "x":317.5,
+                 "y":1113.5
                 }, 
                 {
                  "height":62,
@@ -160,6 +160,196 @@
                  "width":64,
                  "x":160,
                  "y":482
+                }, 
+                {
+                 "gid":1500,
+                 "height":53,
+                 "id":13,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":899.5,
+                 "y":121.5
+                }, 
+                {
+                 "gid":1500,
+                 "height":53,
+                 "id":14,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":673.5,
+                 "y":511.5
+                }, 
+                {
+                 "gid":1500,
+                 "height":53,
+                 "id":15,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":261.5,
+                 "y":827.5
+                }, 
+                {
+                 "gid":1500,
+                 "height":53,
+                 "id":16,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":573.5,
+                 "y":1141.5
+                }, 
+                {
+                 "gid":1456,
+                 "height":59,
+                 "id":17,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"bluecup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":61,
+                 "x":905.5,
+                 "y":734.5
+                }, 
+                {
+                 "gid":1456,
+                 "height":59,
+                 "id":18,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"bluecup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":61,
+                 "x":415.5,
+                 "y":602.5
+                }, 
+                {
+                 "gid":1456,
+                 "height":59,
+                 "id":19,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"bluecup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":61,
+                 "x":705.5,
+                 "y":122.5
+                }, 
+                {
+                 "gid":1456,
+                 "height":59,
+                 "id":20,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"bluecup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":61,
+                 "x":1077.5,
+                 "y":140.5
+                }, 
+                {
+                 "gid":1500,
+                 "height":53,
+                 "id":22,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":55.5,
+                 "y":721.5
+                }, 
+                {
+                 "gid":1500,
+                 "height":53,
+                 "id":23,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"greencup",
+                     "type":"item"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":57,
+                 "x":973.5,
+                 "y":1231.5
+                }, 
+                {
+                 "gid":681,
+                 "height":49,
+                 "id":24,
+                 "name":"",
+                 "properties":
+                    {
+                     "sprite":"treasure",
+                     "targetTilemap":"level2",
+                     "targetX":"20",
+                     "targetY":"30",
+                     "type":"door"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":54,
+                 "x":71,
+                 "y":303.5
                 }],
          "opacity":1,
          "properties":
@@ -173,7 +363,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":13,
+ "nextobjectid":25,
  "orientation":"orthogonal",
  "properties":
     {

@@ -8,5 +8,6 @@ TopDownGame.game.state.add('StartMenu',TopDownGame.StartMenu);
 TopDownGame.game.state.add('GameOver',TopDownGame.GameOver);
 TopDownGame.game.state.add('Game', TopDownGame.Game);
 TopDownGame.game.state.add('Dungeon', TopDownGame.Dungeon);
+TopDownGame.game.state.add('Win', TopDownGame.Win);
 
 TopDownGame.game.state.start('Boot');

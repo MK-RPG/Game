@@ -11,12 +11,12 @@ TopDownGame.Game = function(){
 	
 	this.timerText;
     this.timerImage;
-    this.seconds = 60;
+    //this.seconds = 60;
 };
 
 TopDownGame.Game.prototype = {
   create: function() {
-	  
+    this.seconds = 60;	  
 	var _this = this;
 	  
     this.map = this.game.add.tilemap('maze');
@@ -68,7 +68,7 @@ TopDownGame.Game.prototype = {
   		 _this.timerText.setText(_this.seconds);
   		 timer();
   		 
-  		 if(_this.seconds <= 0) {
+  		 if(_this.seconds == 0) {
   	            _this.gameOver();
   	            clearInterval(timerIndex);
   	            _this.seconds = 60;
@@ -146,8 +146,8 @@ TopDownGame.Game.prototype = {
 
     	}
     	else if(collectable.key == 'bluecup'){
-    	      _this.seconds += 10;
-    	      _this.timerText.setText(_this.seconds);
+    	      _this.game.seconds += 10;
+    	      _this.timerText.setText(_this.game.seconds);
     	      
     	    
     	}
@@ -162,21 +162,21 @@ TopDownGame.Game.prototype = {
     this.player.body.velocity.x = 0;
     this.player.body.velocity.y = 0;
 
-
+var speed = 500;
     if(this.cursors.up.isDown) {
-    	this.player.body.velocity.y = -140;
+    	this.player.body.velocity.y = -speed;
     	this.player.animations.play('up');
     }
     if(this.cursors.down.isDown) {
-    	this.player.body.velocity.y = 140;
+    	this.player.body.velocity.y = speed;
     	this.player.animations.play('bottom');
     }
     if(this.cursors.left.isDown) {
-    	this.player.body.velocity.x = -140;
+    	this.player.body.velocity.x = -speed;
     	this.player.animations.play('left');
     }
     if(this.cursors.right.isDown) {
-    	this.player.body.velocity.x = 140;
+    	this.player.body.velocity.x = speed;
     	this.player.animations.play('right');
     }
   },
@@ -188,6 +188,11 @@ TopDownGame.Game.prototype = {
   enterDoor: function(player, door) {
    //console.log('entering door that will take you to '+door.targetTilemap+' on x:'+door.targetX+' and y:'+door.targetY);
 	  this.state.start('Dungeon');
+	  this.seconds = -1;
+	  console.log(this.state.timerIndex);
+	  clearInterval(this.state.timerIndex);
+	  
+	  
   },
 };
 
