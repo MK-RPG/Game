@@ -1,6 +1,6 @@
 var TopDownGame = TopDownGame || {};
 
-//loading the game assets
+
 TopDownGame.Preload = function(){};
 
 TopDownGame.Preload.prototype = {
@@ -13,16 +13,20 @@ TopDownGame.Preload.prototype = {
 
     //load game assets
     this.load.tilemap('maze', 'assets/tilemaps/maze.json', null, Phaser.Tilemap.TILED_JSON);
+    this.load.tilemap('dungeon', 'assets/tilemaps/dungeonLast.json', null, Phaser.Tilemap.TILED_JSON);
+
     this.load.image('gameTiles', 'assets/images/tileset.png');
+    this.load.image('dungeonTile', 'assets/images/tilesDun.png');
     this.load.image('greencup', 'assets/images/greencup.png');
     this.load.image('bluecup', 'assets/images/bluecup.png');
     this.load.image('sword', 'assets/images/sword.png');
-    this.load.image('player', 'assets/images/player.png');
+    this.load.spritesheet('player', 'assets/images/player.png', 32, 48);
     this.load.image('browndoor', 'assets/images/browndoor.png');
-    this.load.image('space', 'assets/images/space.png');
-    
+    this.load.image('watch', 'assets/images/watch.png');
+    this.load.image('startScreen', 'assets/images/maze2.png');
+    this.load.image('gameOverScreen', 'assets/images/over.png');
   },
   create: function() {
-    this.state.start('Game');
+    this.state.start('StartMenu');
   }
 };
